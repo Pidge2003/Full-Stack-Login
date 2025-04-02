@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Login Form -->
     <div class="container">
         <div class="form-box active" id="login-form">
             <form action="">
@@ -18,6 +19,7 @@
             </form>
         </div>
 
+        <!-- Register Form -->
         <div class="form-box" id="register-form">
             <form action="">
                 <h2>Register</h2>
