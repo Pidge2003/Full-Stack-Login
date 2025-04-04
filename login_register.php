@@ -21,9 +21,9 @@ if (isset($_POST['register'])) {
     exit();
 }
 
-if (isset($_POST[""])) {
-    $name = $_POST['name'];
+if (isset($_POST["login"])) {
     $email = $_POST['email'];
+    $email = $_POST['password'];
 
     $result = $conn->query("SELECT * FROM users WHERE email = '$email");
     if ($result->num_rows > 0) {
