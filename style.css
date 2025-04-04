@@ -1,4 +1,8 @@
+/* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Main Styling */
 
 *{
     margin: 0;
@@ -84,4 +88,16 @@ p a{
 
 p a:hover{
     text-decoration: underline;
+}
+
+/* Error Message */
+
+.error-message{
+    padding: 12px;
+    background: #f8d7da;
+    border-radius: 6px;
+    font-size: 16px;
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
 }
