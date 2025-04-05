@@ -1,11 +1,17 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+<?php
 
 session_start();
 
-$errors = {
-    'login => $_SESSION['login_error'] ?? '',
-    'register => $_SESSION['register_error'] ?? ''
-};
+$errors = [
+    'login' => $_SESSION['login_error'] ?? '',
+    'register' => $_SESSION['register_error'] ?? ''
+];
 $activeForm = $_SESSION['active_form'] ?? 'login';
 
 session_unset();
@@ -31,7 +37,7 @@ function isActiveForm($formName, $activeForm) {
 <body>
 <!-- Login Form -->
     <div class="container">
-        <div class="form-box <?= isActiveForm('login', $activeForm); ?> id="login-form">
+        <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
             <form action="login_register.php" method="post">
                 <h2>Login</h2>
                 <?= showError($errors['login']); ?>
